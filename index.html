@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mi primer Login</title>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" th:href="@{/css/index.css}">
+
+</head>
+<body>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                <div class="container">
+                    <div class="columns">
+                      <div class="column is-half">
+                        <h2> <span class =" label label-default">Jakeflix Requests </span></h2>
+                        <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/xleoqlop" method="post">
+                            <fieldset id="fs-frm-inputs">
+                              <label class = "label label-default" for="media-name">Movie/Tv Show Name:</label>
+                              <input type="text" class="form-control" name="media" id="media-name" placeholder="ie. Avengers" required="true">
+                              <label class = "label label-default" for="IMDB_URL">IMDB Url:</label>
+                              <input type="text" class="form-control" name="IMDB" id="IMDB_URL" placeholder="ie. imdb.com/title/tt0848228" required="false">
+                              <fieldset id="fs-frm-selects">
+                                <label class = "label label-default" or="media-type">Media Type:</label>
+                                <select name="media-type" class="form-control" id="media-type" required="true">
+                                  <option value="Choose" selected="" disabled="">Choose</option>
+                                  <option value="1">Movie</option>
+                                  <option value="3">TV Show</option>
+                                  <option value="5">TV Channel</option>
+                                  <option value="7">Youtube Series</option>
+                                </select>
+                                <input type="hidden" name="_subject" id="email-subject" value="Survey Responses">
+                                <br>
+                            </fieldset>
+                            <input type="submit" value="Submit Reqest">
+                          </form>
+                      </div><br>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
